@@ -51,3 +51,5 @@ export const getStaticProps: GetStaticProps<PostProps> = async (context) => {
     }
   }
 }
+
+export default Post
