@@ -1,2 +1,2 @@
 FROM node:lts
-WORKDIR /workspace
+WORKDIR /workspaces

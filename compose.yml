@@ -7,7 +7,7 @@ services:
     volumes:		
       - type: bind
         source: ./app
-        target: /workspace
+        target: /workspaces
     #"react-sample"の部分はプロジェクト名
     command: sh -c "cd next-sample && npm run dev"
     ports:
