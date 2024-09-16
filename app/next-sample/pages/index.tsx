@@ -1,7 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import localFont from "next/font/local";
-import styles from "@/styles/Home.module.css";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import localFont from 'next/font/local'
+import styles from '@/styles/Home.module.css'
+import styled from 'styled-components'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,7 +16,11 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export default function Home() {
+const H1 = styled.h1`
+  color: red;
+`
+
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -27,21 +33,16 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <Image
-            className={styles.logo}
-            src="https://nextjs.org/icons/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
+          <H1>
+            Welcome to <a href="https://nextjs.org">Next.js!</a>
+          </H1>
           <ol>
             <li>
               Get started by editing <code>pages/index.tsx</code>.
             </li>
             <li>Save and see your changes instantly.</li>
           </ol>
-
+  
           <div className={styles.ctas}>
             <a
               className={styles.primary}
@@ -114,5 +115,8 @@ export default function Home() {
         </footer>
       </div>
     </>
-  );
+  )
+
 }
+
+export default Home
